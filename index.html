@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,6 +87,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- Header -->
@@ -95,6 +97,26 @@
 
   <!-- Conteúdo principal com dropdowns -->
   <div class="content">
+    <div class="dropdown">
+      <button onclick="toggleDropdown(this)">
+        VERSÃO 5.60.24.32 (05/11/2024)
+        <span class="arrow">▶</span>
+      </button>
+      <div class="dropdown-content">
+        <p>A versão 5.60.24.32 teve as seguintes alterações:</p>
+        <br>
+        <p>Inserção Biblioteca</p>
+        <ul>
+          <li>Linha evidencias completa</li>
+          <li>Led embutir avulso</li>
+        </ul>
+        <p>Ajustes e correções</p>
+        <ul>
+          <li>Luminária glass prateleiras novo modelo</li>
+        </ul>
+      </div>
+    </div>
+
     <div class="dropdown">
       <button onclick="toggleDropdown(this)">
         VERSÃO 5.60.24.31
@@ -112,12 +134,12 @@
         </ul>
         <p>Ajustes e correções</p>
         <ul>
-            <li>Canto Articulado Direito / Paileo Editavel</li>
-            <li>Canto: Ajuste na caixa, travessa interna</li>
+          <li>Canto Articulado Direito / Paileo Editavel</li>
+          <li>Canto: Ajuste na caixa, travessa interna</li>
         </ul>
       </div>
     </div>
-    
+
     <!-- Outro exemplo de dropdown -->
     <div class="dropdown">
       <button onclick="toggleDropdown(this)">
@@ -129,9 +151,9 @@
         <br>
         <p>Novas cores disponíveis</p>
         <ul>
-        <li>Ginduia Velutto</li>
-        <li>Linho Belga</li>
-        <li>Off White Suave</li>
+          <li>Ginduia Velutto</li>
+          <li>Linho Belga</li>
+          <li>Off White Suave</li>
         </ul>
       </div>
     </div>
@@ -151,4 +173,5 @@
   </script>
 
 </body>
+
 </html>
