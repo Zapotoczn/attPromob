@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+  /* Header */
+  header {
+    background-color: #004c2d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Conteúdo principal */
+  .content {
+    padding: 20px;
+  }
+  
+  .cabeca{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  #linha {
+    width: 100%;
+    height: 2px;
+    background-color: #004c2d;
+  }
+
+  #luminaria{
+    display: inline;
+    color: #004c2d;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  #imagemPai{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  #orientacoes{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #imagem{
+   width: 70%;
+   border: 1px;
+   border-radius: 20px;
+   border-style: solid;
+   border-color: #004c2d;
+    pointer-events: none;
+  }
+
+    .topo {
+    font-weight: bold;
+    font-size: 15px;
+  }
+  
+  /* Estilos para os dropdowns */
+  .dropdown {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+  
+  .dropdown button {
+    width: 100%;
+    background-color: #004c2d;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dropdown-content {
+    padding: 10px;
+    display: none;
+    background-color: #f4f4f4;
+  }
+  
+  /* Estilo da seta */
+  .dropdown button .arrow {
+    transition: transform 0.3s ease;
+  }
+  
+  .dropdown.open .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown.open .arrow {
+    transform: rotate(90deg);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #004c2d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-height: 60px;
+  }
+  
+  /* Estilos responsivos para mobile */
+  @media (max-width: 600px) {
+    header {
+      font-size: 20px;
+      padding: 15px;
+    }
+  
+    .content {
+      padding: 15px;
+    }
+  
+    .dropdown button {
+      font-size: 16px;
+      padding: 8px;
+    }
+  
+    footer {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
