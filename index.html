@@ -15,8 +15,16 @@
     <img src="logo-leo-sobmedida.png" alt="">
   </header>
 
+
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Pesquisar versão..."  onkeyup="handleEnterKey(event)" >
+    <button onclick="filterVersions()">
+      <img src="img/lupa.png" alt="Pesquisar" style="width: 16px; height: 16px;">
+    </button>
+  </div>
+
   <!-- Conteúdo principal com dropdowns -->
-  <div class="content">
+  <div class="content" id="versionList">
     <div class="dropdown" oncontextmenu="return false;">
       <button onclick="toggleDropdown(this)">
         VERSÃO 5.60.24.34 (05/11/2024)
@@ -86,7 +94,6 @@
       </div>
     </div>
 
-    <!-- Outro exemplo de dropdown -->
     <div class="dropdown">
       <button onclick="toggleDropdown(this)">
         VERSÃO 5.60.24.26
@@ -110,7 +117,7 @@
     Engenharia de Produto
   </footer>
 
-  <!-- JavaScript para o dropdown -->
+  <!-- JavaScript para o dropdown e a barra de pesquisa -->
   <script>
     function toggleDropdown(button) {
       const dropdown = button.parentElement;
@@ -120,6 +127,29 @@
     document.addEventListener("contextmenu", function (event) {
       event.preventDefault();
     });
+
+    function filterVersions() {
+      const input = document.getElementById('searchInput');
+      const filter = input.value.toUpperCase();
+      const versionList = document.getElementById('versionList');
+      const dropdowns = versionList.getElementsByClassName('dropdown');
+
+      for (let i = 0; i < dropdowns.length; i++) {
+        const button = dropdowns[i].getElementsByTagName("button")[0];
+        if (button.innerText.toUpperCase().indexOf(filter) > -1) {
+          dropdowns[i].style.display = "";
+        } else {
+          dropdowns[i].style.display = "none";
+        }
+      }
+    }
+
+    function handleEnterKey(event) {
+    if (event.key === "Enter") {
+      filterVersions();
+    }
+  }
+
   </script>
 
 </body>

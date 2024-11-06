@@ -66,6 +66,7 @@ body {
     font-weight: bold;
     font-size: 15px;
   }
+
   
   /* Estilos para os dropdowns */
   .dropdown {
@@ -124,11 +125,64 @@ body {
     max-height: 60px;
   }
   
+
+  /* Estilo para o container da barra de pesquisa */
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 5px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Estilo do campo de entrada de pesquisa */
+.search-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 5px 0 0 5px;
+  color: #333;
+}
+
+/* Estilo do botão com a lupa */
+.search-container button {
+  background-color: #004c2d;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo da lupa */
+.search-container button img {
+  width: 16px;
+  height: 16px;
+  filter: invert(1); /* Deixa a imagem da lupa branca */
+}
+
+/* Efeito de foco para o campo de entrada */
+.search-container input[type="text"]:focus {
+  background-color: #f0f0f0;
+}
+
   /* Estilos responsivos para mobile */
   @media (max-width: 600px) {
     header {
       font-size: 20px;
       padding: 15px;
+      border-bottom-left-radius: 120%;
+      border-bottom-right-radius: 120%;
     }
   
     .content {
@@ -143,5 +197,19 @@ body {
     footer {
       font-size: 14px;
       padding: 10px;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+      padding: 5px;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
