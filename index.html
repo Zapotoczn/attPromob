@@ -10,148 +10,131 @@
 
 <body>
 
-  <!-- Header -->
-  <header>
-    <img src="logo-leo-sobmedida.png" alt="">
-  </header>
-
-
-  <div class="search-container">
-    <input type="text" id="searchInput" placeholder="Pesquisar versão..."  onkeyup="handleEnterKey(event)" >
-    <button onclick="filterVersions()">
-      <img src="img/lupa.png" alt="Pesquisar" style="width: 16px; height: 16px;">
-    </button>
+  <!-- Splash Screen -->
+  <div id="splash-screen">
+    <img src="logo-leo-sobmedida.png" alt="Leo Sob Medida Logo">
   </div>
 
-  <!-- Conteúdo principal com dropdowns -->
-  <div class="content" id="versionList">
-    <div class="dropdown" oncontextmenu="return false;">
-      <button onclick="toggleDropdown(this)">
-        VERSÃO 5.60.24.34 (05/11/2024)
-        <span class="arrow">▶</span>
+  <!-- Conteúdo principal do site -->
+  <div id="main-content" style="display: none;">
+
+    <!-- Header -->
+    <header>
+      <img src="logo-leo-sobmedida.png" alt="">
+    </header>
+
+    <!-- Barra de pesquisa -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Pesquisar versão..." onkeyup="handleEnterKey(event)">
+      <button onclick="filterVersions()">
+        <img src="img/lupa.png" alt="Pesquisar" style="width: 16px; height: 16px;">
       </button>
-      <div class="dropdown-content">
-        <p>A versão 5.60.24.34 teve as seguintes alterações:</p>
-        <p class="cabeca">Biblioteca</p>
-        <div id="linha"></div>
-        <p class="topo">Linha evidencias:</p>
-        <ul>
-          <li type="">Disponibilizada a linha completa exclusividade Leo Sob Medida.</li>
-        </ul>
-        <p class="topo">Luminous:</p>
-        <ul>
-          <li> Led Mínima Light opção para inserção avulsa (sem aplicação da usinagem) na aba
-            <strong>Acessórios>Luminus.</strong> Editável com dimensão máxima de 3000mm.</li>
-        </ul>
-        <p class="cabeca">Ajustes e correções</p>
-        <div id="linha"></div>
-        <p class="topo">Acessorios:</p>
-        <ul>
-          <li>
-            <div id="luminaria">Luminária Glass:</div>Novo modelo de luminária nas cores branca e prata, agora com nova
-            lente difusora. A nova lente melhora o efeito contínuo do led ao “lavar” a prateleira de vidro.
-          </li>
-        </ul>
-        <div id="imagemPai">
-          <img src="img/ledline.png" alt="" id="imagem" oncontextmenu="return false;">
+    </div>
+
+
+    <!-- Conteúdo principal com dropdowns -->
+    <div class="content" id="versionList">
+      <div class="dropdown" oncontextmenu="return false;">
+        <button onclick="toggleDropdown(this)">
+          VERSÃO 5.60.24.34 (05/11/2024)
+          <span class="arrow">▶</span>
+        </button>
+        <div class="dropdown-content">
+          <p>A versão 5.60.24.34 teve as seguintes alterações:</p>
+          <p class="cabeca">Biblioteca</p>
+          <div id="linha"></div>
+          <p class="topo">Linha evidencias:</p>
+          <ul>
+            <li>Disponibilizada a linha completa exclusividade Leo Sob Medida.</li>
+          </ul>
+          <p class="topo">Luminous:</p>
+          <ul>
+            <li> Led Mínima Light opção para inserção avulsa (sem aplicação da usinagem) na aba
+              <strong>Acessórios>Luminus.</strong> Editável com dimensão máxima de 3000mm.
+            </li>
+          </ul>
+          <p class="cabeca">Ajustes e correções</p>
+          <div id="linha"></div>
+          <p class="topo">Acessórios:</p>
+          <ul>
+            <li>
+              <div id="luminaria">Luminária Glass:</div>Novo modelo de luminária nas cores branca e prata, agora com
+              nova
+              lente difusora. A nova lente melhora o efeito contínuo do led ao “lavar” a prateleira de vidro.
+            </li>
+          </ul>
+          <div id="imagemPai" onclick="openModal()">
+            <img src="img/ledline.png" alt="Led Line" id="imagem" oncontextmenu="return false;" >
+            <div id="bottom">
+              <p> 
+                Clique para abrir a imagem
+              </p>
+            </div>
+          </div>
+          <div id="linha"></div>
+          <p class="cabeca">Orientações</p>
+          <div id="linha"></div>
+          <ul id="orientacoes">
+            <li>Após a atualização, as luminárias existentes nos projetos de cozinhas irão aparecer
+              transparentes, portanto, devem ser desagregadas e agregadas novamente.</li>
+            <li>As lojas devem se organizar para executarem as atualizações em suas máquinas para
+              casos de projetos que serão apresentados posteriormente a data da liberação da
+              atualização, isso evitar possíveis erros ou diferenças nos projetos.</li>
+            <li>Em caso de inconformidade resultantes da atualização entre em contato com o
+              departamento de engenharia de produtos para solicitar orientações.</li>
+          </ul>
         </div>
-        <div id="linha"></div>
-        <p class="cabeca">Orientações</p>
-        <div id="linha"></div>
+      </div>
 
-        <ul id="orientacoes">
-          <li>Após a atualização, as luminárias existentes nos projetos de cozinhas irão aparecer
-            transparentes, portanto, devem ser desagregadas e agregadas novamente.</li>
-          <li>As lojas devem se organizar para executarem as atualizações em suas máquinas para
-            casos de projetos que serão apresentados posteriormente a data da liberação da
-            atualização, isso evitar possíveis erros ou diferenças nos projetos.</li>
-          <li>Em caso de inconformidade resultantes da atualização entre em contato com o
-            departamento de engenharia de produtos para solicitar orientações.</li>
-        </ul>
+      <div class="dropdown">
+        <button onclick="toggleDropdown(this)">
+          VERSÃO 5.60.24.31
+          <span class="arrow">▶</span>
+        </button>
+        <div class="dropdown-content">
+          <p>A versão 5.60.24.31 teve as seguintes alterações:</p>
+          <p>Inserção Biblioteca</p>
+          <ul>
+            <li>Réguas 30MM 1 Bordo / Filete Miranda / Réguas 30MM / Réguas Editáveis</li>
+            <li>Inserção de novas orientações</li>
+            <li>Novas funcionalidades.</li>
+          </ul>
+          <p>Ajustes e correções</p>
+          <ul>
+            <li>Canto Articulado Direito / Paileo Editável</li>
+            <li>Canto: Ajuste na caixa, travessa interna</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button onclick="toggleDropdown(this)">
+          VERSÃO 5.60.24.26
+          <span class="arrow">▶</span>
+        </button>
+        <div class="dropdown-content">
+          <p>A versão 5.60.24.26 introduziu melhorias:</p>
+          <p>Novas cores disponíveis</p>
+          <ul>
+            <li>Ginduia Velutto</li>
+            <li>Linho Belga</li>
+            <li>Off White Suave</li>
+          </ul>
+        </div>
       </div>
     </div>
-
-    <div class="dropdown">
-      <button onclick="toggleDropdown(this)">
-        VERSÃO 5.60.24.31
-        <span class="arrow">▶</span>
-      </button>
-      <div class="dropdown-content">
-        <p>A versão 5.60.24.31 teve as seguintes alterações:</p>
-        <br>
-        <p>Inserção Biblioteca</p>
-        <ul>
-
-          <li>Réguas 30MM 1 Bordo / Filete Miranda / Réguas 30MM / Réguas Editáveis</li>
-          <li>Inserção de novas orientações</li>
-          <li>Novas funcionalidades.</li>
-        </ul>
-        <p>Ajustes e correções</p>
-        <ul>
-          <li>Canto Articulado Direito / Paileo Editavel</li>
-          <li>Canto: Ajuste na caixa, travessa interna</li>
-        </ul>
-      </div>
+    <div id="modal" onclick="closeModal()">
+      <img id="modal-img" src="img/ledline.png" alt="Led Line">
     </div>
 
-    <div class="dropdown">
-      <button onclick="toggleDropdown(this)">
-        VERSÃO 5.60.24.26
-        <span class="arrow">▶</span>
-      </button>
-      <div class="dropdown-content">
-        <p>A versão 5.60.24.26 introduziu melhorias:</p>
-        <br>
-        <p>Novas cores disponíveis</p>
-        <ul>
-          <li>Ginduia Velutto</li>
-          <li>Linho Belga</li>
-          <li>Off White Suave</li>
-        </ul>
-      </div>
-    </div>
+
+    <!-- Footer -->
+    <footer>
+      Engenharia de Produto
+    </footer>
   </div>
-
-  <!-- Footer -->
-  <footer>
-    Engenharia de Produto
-  </footer>
-
-  <!-- JavaScript para o dropdown e a barra de pesquisa -->
-  <script>
-    function toggleDropdown(button) {
-      const dropdown = button.parentElement;
-      dropdown.classList.toggle('open');
-    }
-
-    document.addEventListener("contextmenu", function (event) {
-      event.preventDefault();
-    });
-
-    function filterVersions() {
-      const input = document.getElementById('searchInput');
-      const filter = input.value.toUpperCase();
-      const versionList = document.getElementById('versionList');
-      const dropdowns = versionList.getElementsByClassName('dropdown');
-
-      for (let i = 0; i < dropdowns.length; i++) {
-        const button = dropdowns[i].getElementsByTagName("button")[0];
-        if (button.innerText.toUpperCase().indexOf(filter) > -1) {
-          dropdowns[i].style.display = "";
-        } else {
-          dropdowns[i].style.display = "none";
-        }
-      }
-    }
-
-    function handleEnterKey(event) {
-    if (event.key === "Enter") {
-      filterVersions();
-    }
-  }
-
-  </script>
-
+  <script src="script.js">
+   </script>
 </body>
 
 </html>
