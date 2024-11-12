@@ -22,6 +22,12 @@ function openModal() {
     const dropdown = button.parentElement;
     dropdown.classList.toggle('open');
   }
+  
+
+  function toggleDropdown(button) {
+    const dropdown = button.parentElement;
+    dropdown.classList.toggle('open');
+  }
 
   document.addEventListener("contextmenu", function (event) {
     event.preventDefault();
