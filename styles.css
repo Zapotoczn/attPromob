@@ -128,7 +128,7 @@ header {
 
 /* Classe para o dropdown aberto */
 .dropdown.open .dropdown-content {
-  max-height: 1000px; /* Altura máxima suficiente para expandir o conteúdo */
+  max-height: 5000px; /* Altura máxima suficiente para expandir o conteúdo */
   opacity: 1;
   padding: 10px; /* Aplica o padding completo quando o dropdown estiver aberto */
 }
